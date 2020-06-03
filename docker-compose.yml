@@ -17,7 +17,7 @@ services:
           - node.labels.name == bastion
           - node.role == manager
       restart_policy:
-        condition: unless-stopped
+        condition: on-failure
         delay: 5s
         max_attempts: 5
         window: 120s
@@ -34,7 +34,7 @@ services:
           - node.labels.name == bastion
           - node.role == manager
       restart_policy:
-        condition: unless-stopped
+        condition: on-failure
         delay: 5s
         max_attempts: 5
         window: 120s
