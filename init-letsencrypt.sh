@@ -5,7 +5,7 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   exit 1
 fi
 
-domains=(stage.click-knock.com *.stage.click-knock.com)
+domains=(stage.click-knock.com f.stage.click-knock.com wsl.stage.click-knock.com file.stage.click-knock.com tick.stage.click-knock.com 24print.stage.click-knock.com preview.stage.click-knock.com product.stage.click-knock.com transfer.stage.click-knock.com processor.stage.click-knock.com)
 rsa_key_size=4096
 data_path="./data/certbot"
 email="aka@ivanets.online" # Adding a valid address is strongly recommended
@@ -34,7 +34,7 @@ docker-compose run --rm --entrypoint "\
   openssl req -x509 -nodes -newkey rsa:1024 -days 1\
     -keyout '$path/privkey.pem' \
     -out '$path/fullchain.pem' \
-    -subj '/CN=stage.click-knock.com'" certbot
+    -subj '/CN=localhost'" certbot
 echo
 
 
