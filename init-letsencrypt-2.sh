@@ -8,7 +8,7 @@ fi
 domains=(stage.click-knock.com f.stage.click-knock.com wsl.stage.click-knock.com file.stage.click-knock.com tick.stage.click-knock.com 24print.stage.click-knock.com preview.stage.click-knock.com product.stage.click-knock.com transfer.stage.click-knock.com processor.stage.click-knock.com)
 rsa_key_size=4096
 data_path="./data/certbot"
-email="" # Adding a valid address is strongly recommended
+email="aka@ivanets.online" # Adding a valid address is strongly recommended
 staging=0 # Set to 1 if you're testing your setup to avoid hitting request limits
 
 if [ -d "$data_path" ]; then
